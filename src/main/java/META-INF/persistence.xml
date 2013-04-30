@@ -3,6 +3,8 @@
 	<persistence-unit name="ProjCD">
 	<provider>org.hibernate.ejb.HibernatePersistence</provider>
 		<!-- Objets métiers -->
+		<class>com.ben.cd.model.Album</class>
+		<class>com.ben.cd.model.Categorie</class>
 	<properties>
 			<property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLInnoDBDialect" />

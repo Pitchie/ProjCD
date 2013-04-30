@@ -48,20 +48,7 @@
 				class="icon-trash icon-white"></i> <span><strong>Delete</strong></span>
 			</a>
 		</div>
-		
-<!-- 		<div class="text-center"> -->
-<!-- 			<div class="modal hide" id="infos"> -->
-<!-- 				<div class="modal-header"> -->
-<!-- 					<a class="close" data-dismiss="modal">×</a> -->
-<!-- 					<h3>Plus d'informations</h3> -->
-<!-- 				</div> -->
-<!-- 				<div class="modal-body"> -->
-<!-- 					<p>Informations sur le morceau...</p> -->
-<!-- 				</div> -->
-<!-- 			</div> -->
-<!-- 			<a class="btn btn-primary" data-toggle="modal" href="#infos">Plus -->
-<!-- 				d'informations</a> -->
-<!-- 		</div> -->
+
 	</div>
 </body>
 </html>
