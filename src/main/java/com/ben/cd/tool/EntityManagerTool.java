@@ -15,7 +15,7 @@ public class EntityManagerTool {
 	   private static final Logger LOG = Logger.getLogger(EntityManagerTool.class.getSimpleName());
 
 	    private static final EntityManagerFactory ENTITY_MANAGER =
-	            Persistence.createEntityManagerFactory("rh");
+	            Persistence.createEntityManagerFactory("cd");
 
 	    private static final ThreadLocal<EntityManager> THREAD_LOCAL = new ThreadLocal<EntityManager>();
 

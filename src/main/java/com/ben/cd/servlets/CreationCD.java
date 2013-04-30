@@ -3,9 +3,7 @@ package com.ben.cd.servlets;
 
 
 import java.io.IOException;
-import java.util.List;
 
-import javax.persistence.EntityManager;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -27,16 +25,16 @@ public class CreationCD extends HttpServlet{
     String titre = request.getParameter( "titre" );
     Album album = new Album();
     album.setTitre( titre );
-    AlbumService.getInstance().insertOrUpdate(album);
-
+//  AlbumService.getInstance().insertOrUpdate(album); 
+    
+//  List<Album> allAlbums = AlbumService.getInstance().getAllAlbums();
+//  List<Categorie> allCategories = CategorieService.getInstance().getAllCategories();
     
 //  String categorie = request.getParameter( "categorie" );
 //    album.setCategorie( categorie );
-    
-    
-    
+
     
     request.setAttribute( "album", album );
-    this.getServletContext().getRequestDispatcher( "/jsp/creerAlbum.jsp" ).forward( request, response );
+    this.getServletContext().getRequestDispatcher( "/WEB-INF/jsp/creerAlbum.jsp" ).forward( request, response );
 	}
 }
