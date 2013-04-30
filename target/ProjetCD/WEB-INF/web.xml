@@ -3,7 +3,7 @@
   
   <servlet>
         <servlet-name>CreationCD</servlet-name>
-        <servlet-class>com.sun.cd.servlets.CreationCD</servlet-class>
+        <servlet-class>com.ben.cd.servlets.CreationCD</servlet-class>
     </servlet>
      
     <servlet-mapping>

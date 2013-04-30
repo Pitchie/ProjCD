@@ -20,7 +20,7 @@ public abstract class CDObject implements Comparable<CDObject> {
     @Override
     public boolean equals(Object o) {
         return o instanceof CDObject
-                && ((getId() == null && ((CDObject) o).getId() == null)
+                && ((getId() == null && ((CDObject) o).getId() == null) 
                 || (getId() != null && getId().equals(((CDObject) o).getId())));
     }
 
