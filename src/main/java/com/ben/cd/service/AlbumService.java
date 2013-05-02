@@ -52,10 +52,10 @@ public class AlbumService extends CDService<Album>{
 		return super.getById(Album.class, id);
 	}
 
-//	public List<Album> getAllAlbums()
-//	{
-//		EntityManager em = getEntityManager();
-//	    List<Album> albums = em.createQuery("Select a.titre from Album a", Album.class).getResultList();
-//		return (albums);
-//	}
+	public List<Album> getAllAlbums()
+	{
+		EntityManager em = getEntityManager();
+	    List<Album> albums = em.createQuery("Select a.titre from Album a", Album.class).getResultList();
+		return (albums);
+	}
 }

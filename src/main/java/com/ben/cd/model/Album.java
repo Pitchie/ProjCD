@@ -1,15 +1,19 @@
 package com.ben.cd.model;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 
 import org.hibernate.validator.constraints.Length;
 
 import com.ben.cd.CDObject;
 
+@Entity
+@XmlRootElement
 public class Album extends CDObject{
 private static final int FIELD_LENGTH = 255;
 	
