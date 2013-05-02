@@ -22,7 +22,7 @@ public class Categorie extends CDObject{
 	
 	@Column(length = FIELD_LENGTH)
 	@Length(min = 1, message = "Le titre doit contenir au moins 1 caractère. ")
-	private String categorie;
+	private String genre;
 
 	@Override
 	@XmlElement
@@ -34,12 +34,14 @@ public class Categorie extends CDObject{
 		this.id = id;
 	}
 
-	public String getCategorie() {
-		return categorie;
+	public String getGenre() {
+		return genre;
 	}
 
-	public void setCategorie(String categorie) {
-		this.categorie = categorie;
+	public void setGenre(String genre) {
+		this.genre = genre;
 	}
+
+
 
 }

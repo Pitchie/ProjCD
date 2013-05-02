@@ -55,7 +55,7 @@ public class AlbumService extends CDService<Album>{
 	public List<Album> getAllAlbums()
 	{
 		EntityManager em = getEntityManager();
-	    List<Album> albums = em.createQuery("Select a.titre from Album a", Album.class).getResultList();
+	    List<Album> albums = em.createQuery("Select a.titre from album a", Album.class).getResultList();
 		return (albums);
 	}
 }

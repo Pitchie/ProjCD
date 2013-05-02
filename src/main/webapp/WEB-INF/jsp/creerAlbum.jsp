@@ -62,6 +62,15 @@
 						</div>
 					</div>
 				</fieldset>
+
+
+				<div>
+					<c:forEach items="${liste}" var="item">
+    								${item}<br>
+					</c:forEach>
+				</div>
+
+
 				<button type="submit" class="btn btn-success">Valider</button>
 				<button type="reset" class="btn btn-warning">Remettre à zéro</button>
 			</form>

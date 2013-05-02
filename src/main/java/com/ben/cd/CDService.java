@@ -48,6 +48,7 @@ public class CDService<T extends CDObject> {
     private void insert(T t) {
         EntityManager em = getEntityManager();
         em.persist(t);
+        EntityManagerTool.closeEntityManager();
     }
 
     protected void delete(T t) {

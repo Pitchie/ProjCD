@@ -1,6 +1,7 @@
 package com.ben.cd.servlets;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -10,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.ben.cd.model.Album;
 import com.ben.cd.model.Categorie;
 import com.ben.cd.service.AlbumService;
+import com.ben.cd.service.CategorieService;
 
 public class CreationCD extends HttpServlet {
 	/**
@@ -28,13 +30,12 @@ public class CreationCD extends HttpServlet {
 //		album.setCategorie( categorie );
 
 		AlbumService.getInstance().insertOrUpdate(album);
-
-		// List<Album> allAlbums = AlbumService.getInstance().getAllAlbums();
-		// List<Categorie> allCategories =
-		// CategorieService.getInstance().getAllCategories();
+		List<Categorie> liste = CategorieService.getInstance().getAllCategories();
+	
 
 
 		request.setAttribute("album", album);
+		request.setAttribute("liste", liste);
 		this.getServletContext()
 				.getRequestDispatcher("/WEB-INF/jsp/creerAlbum.jsp")
 				.forward(request, response);

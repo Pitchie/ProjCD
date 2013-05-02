@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
+import javax.persistence.EntityManager;
 import javax.validation.ConstraintViolation;
 import javax.validation.Validation;
 import javax.validation.Validator;
@@ -12,6 +13,7 @@ import javax.validation.ValidatorFactory;
 import com.ben.cd.CDService;
 import com.ben.cd.exception.BusinessException;
 import com.ben.cd.model.Categorie;
+import com.ben.cd.tool.EntityManagerTool;
 
 public class CategorieService extends CDService<Categorie>{
 	
@@ -50,10 +52,10 @@ public class CategorieService extends CDService<Categorie>{
 		return super.getById(Categorie.class, id);
 	}
 
-//	public List<Categorie> getAllCategories()
-//	{
-//		EntityManager em = getEntityManager();
-//	    List<Categorie> categories = em.createQuery("Select a.titre from Categorie a", Categorie.class).getResultList();
-//		return (categories);
-//	}
+	public List<Categorie> getAllCategories()
+	{
+		EntityManager em = EntityManagerTool.getEntityManager();
+	    List<Categorie> categories = em.createQuery("Select c.genre from categorie c", Categorie.class).getResultList();
+		return (categories);
+	}
 }
