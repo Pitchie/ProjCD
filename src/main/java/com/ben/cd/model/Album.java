@@ -4,7 +4,6 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -25,9 +24,10 @@ private static final int FIELD_LENGTH = 255;
 	@Length(min = 1, message = "Le titre doit contenir au moins 1 caractère. ")
 	private String titre;
 	
-	@ManyToOne
-	Categorie categorie;
-
+	@Column(length = FIELD_LENGTH)
+	@Length(min = 1, message = "Le titre doit contenir au moins 1 caractère. ")
+	private String style;
+	
 	@Override
 	@XmlElement
 	public Long getId() {
@@ -46,12 +46,12 @@ private static final int FIELD_LENGTH = 255;
 		this.id = id;
 	}
 
-	public Categorie getCategorie() {
-		return categorie;
+	public String getStyle() {
+		return style;
 	}
 
-	public void setCategorie(Categorie categorie) {
-		this.categorie = categorie;
+	public void setStyle(String style) {
+		this.style = style;
 	}
 	
 }

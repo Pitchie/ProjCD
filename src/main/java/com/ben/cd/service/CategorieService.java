@@ -51,11 +51,12 @@ public class CategorieService extends CDService<Categorie>{
 	public Categorie getById(Long id) {
 		return super.getById(Categorie.class, id);
 	}
-
+	
+    @SuppressWarnings("unchecked")
 	public List<Categorie> getAllCategories()
 	{
 		EntityManager em = EntityManagerTool.getEntityManager();
-	    List<Categorie> categories = em.createQuery("Select c.genre from categorie c", Categorie.class).getResultList();
+		List<Categorie> categories = em.createQuery("SELECT c.genre FROM Categorie c").getResultList();
 		return (categories);
 	}
 }

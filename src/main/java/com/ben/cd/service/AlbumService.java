@@ -52,10 +52,11 @@ public class AlbumService extends CDService<Album>{
 		return super.getById(Album.class, id);
 	}
 
+    @SuppressWarnings("unchecked")
 	public List<Album> getAllAlbums()
 	{
 		EntityManager em = getEntityManager();
-	    List<Album> albums = em.createQuery("Select a.titre from album a", Album.class).getResultList();
+		List<Album> albums = em.createQuery("Select a.titre from Album a").getResultList();
 		return (albums);
 	}
 }

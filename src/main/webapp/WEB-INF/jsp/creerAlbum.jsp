@@ -42,35 +42,18 @@
 									Vous devez entrer un nom d'Album !
 								</div>
 
-								<!-- 								<div class="text-center"> -->
-								<!-- 								<select name="album"> -->
-								<!-- 									<option></option> -->
-								<%-- 									<c:forEach var="" items="${albums}"> --%>
-								<%-- 									</c:forEach> --%>
-								<!-- 								</select> -->
-								<!-- 								</div> -->
-
 								<div class="text-center text-warning"><h5>Choisir une catégorie</h5></div>
-								<div>
-									<select class="selectpicker" title="toto">
-										<option>Rock</option>
-										<option>Electro</option>
-										<option>Jazz</option>
-									</select>
-								</div>
 							</div>
 						</div>
 					</div>
 				</fieldset>
-
-
 				<div>
-					<c:forEach items="${liste}" var="item">
-    								${item}<br>
+				<select>
+					<c:forEach items="${liste}" var="item">${item}<br>
+					<option>${item}</option>
 					</c:forEach>
+					</select>
 				</div>
-
-
 				<button type="submit" class="btn btn-success">Valider</button>
 				<button type="reset" class="btn btn-warning">Remettre à zéro</button>
 			</form>

@@ -23,17 +23,15 @@ public class CreationCD extends HttpServlet {
 			throws ServletException, IOException {
 
 		String titre = request.getParameter("titre");
+		String style = request.getParameter("style");
 		Album album = new Album();
 		album.setTitre(titre);
-		
-//		Categorie categorie = request.getParameter( "categorie" );
-//		album.setCategorie( categorie );
+		album.setStyle(style);
 
-		AlbumService.getInstance().insertOrUpdate(album);
-		List<Categorie> liste = CategorieService.getInstance().getAllCategories();
-	
-
-
+		if (titre != "")
+			AlbumService.getInstance().insertOrUpdate(album);
+		List<Categorie> liste = CategorieService.getInstance()
+				.getAllCategories();
 		request.setAttribute("album", album);
 		request.setAttribute("liste", liste);
 		this.getServletContext()

@@ -24,22 +24,16 @@
 		</nav>
 
 		<div class="text-center">
-			<h4>Liste des morceaux par catégorie</h4>
+			<h4>Liste des morceaux</h4>
 		</div>
+		
 		<div class="text-center">
-			<select class="selectpicker">
-				<optgroup label="Rock">
-					<option>ACDC</option>
-					<option>Nirvana</option>
-					<option>Muse</option>
-				</optgroup>
-				<optgroup label="Electro">
-					<option>Guetta</option>
-					<option>Solveig</option>
-					<option>Sinclar</option>
-				</optgroup>
-			</select>
-		</div>
+				<select>
+					<c:forEach items="${liste}" var="item">${item}<br>
+					<option>${item}</option>
+					</c:forEach>
+					</select>
+				</div>
 
 		<div class="text-center">
 			<a href="#" class="btn btn-primary"> <i
