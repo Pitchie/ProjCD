@@ -22,27 +22,30 @@
 				</div>
 			</div>
 		</nav>
-
 		<div class="text-center">
-			<h4>Liste des morceaux</h4>
+			<form method="get" action="gestionCD">
+				<fieldset>
+					<div class="text-center">
+						<h4>Liste des morceaux</h4>
+					</div>
+
+					<div class="text-center">
+						<select name="current">
+							<c:forEach items="${liste}" var="item">${item}<br>
+								<option>${item}</option>
+							</c:forEach>
+						</select>
+					</div>
+
+					<div class="text-center">
+						<button name="status" value="delete" type="submit"
+							class="btn btn-primary">
+							<i class="icon-trash icon-white"></i> <span><strong>Delete</strong></span>
+						</button>
+					</div>
+				</fieldset>
+			</form>
 		</div>
-		
-		<div class="text-center">
-				<select>
-					<c:forEach items="${liste}" var="item">${item}<br>
-					<option>${item}</option>
-					</c:forEach>
-					</select>
-				</div>
-
-		<div class="text-center">
-			<a href="#" class="btn btn-primary"> <i
-				class="icon-edit icon-white"></i> <span><strong>Edit</strong></span>
-			</a> <a href="#" class="btn btn-primary"> <i
-				class="icon-trash icon-white"></i> <span><strong>Delete</strong></span>
-			</a>
-		</div>
-
 	</div>
 </body>
 </html>

@@ -25,7 +25,7 @@ private static final int FIELD_LENGTH = 255;
 	private String titre;
 	
 	@Column(length = FIELD_LENGTH)
-	@Length(min = 1, message = "Le titre doit contenir au moins 1 caractère. ")
+	@Length(min = 1, message = "Le style doit contenir au moins 1 caractère. ")
 	private String style;
 	
 	@Override

@@ -20,6 +20,14 @@ public class GestionCD extends HttpServlet {
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		
+		String current = request.getParameter("current");
+		String status = request.getParameter("status");
+		Album album = new Album();
+		String test = "delete";
+		if (test.equals(status)){
+			AlbumService.getInstance().deleteByTitre(album, current);
+		}
 
 		List<Album> liste = AlbumService.getInstance().getAllAlbums();
 		request.setAttribute("liste", liste);

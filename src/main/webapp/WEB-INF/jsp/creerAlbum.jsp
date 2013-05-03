@@ -31,31 +31,35 @@
 				<fieldset>
 					<h2>Informations Album</h2>
 					<div class="text-center">
-
 						<div class="control-group">
 							<div class="controls">
-								<h4><label for="titre" class="text-warning"> Titre *</label></h4> <input
-									type="text" placeholder="Tapez le titre de l'Album" id="titre"
-									name="titre" value="" size="20" maxlength="20" />
+								<h4>
+									<label for="titre" class="text-warning"> Titre *</label>
+								</h4>
+								<input type="text" placeholder="Tapez le titre de l'Album"
+									id="titre" name="titre" value="" size="20" maxlength="20" />
 								<div class="alert alert-error hide">
 									<h4 class="alert-heading">Erreur !</h4>
 									Vous devez entrer un nom d'Album !
 								</div>
 
-								<div class="text-center text-warning"><h5>Choisir une catégorie</h5></div>
+								<div class="text-center text-warning">
+									<h5>Choisir une catégorie</h5>
+								</div>
 							</div>
 						</div>
 					</div>
+					<div>
+						<select name="style">
+							<c:forEach items="${liste}" var="item">${item}<br>
+								<option>${item}</option>
+							</c:forEach>
+						</select>
+					</div>
 				</fieldset>
-				<div>
-				<select>
-					<c:forEach items="${liste}" var="item">${item}<br>
-					<option>${item}</option>
-					</c:forEach>
-					</select>
-				</div>
 				<button type="submit" class="btn btn-success">Valider</button>
-				<button type="reset" class="btn btn-warning">Remettre à zéro</button>
+				<button type="reset" class="btn btn-warning">Remettre à
+					zéro</button>
 			</form>
 		</div>
 	</div>

@@ -63,7 +63,7 @@ public class CDService<T extends CDObject> {
             throw new TechnicalException("Paramètre d'appel à la méthode manquant ou null : c ou id");
         }
         EntityManager em = getEntityManager();
-        Query q = em.createQuery("DELETE FROM " + c.getSimpleName() + " WHERE id = :id");
+        Query q = em.createQuery("DELETE FROM Album WHERE id = :id");
         q.setParameter("id", id);
         q.executeUpdate();
     }

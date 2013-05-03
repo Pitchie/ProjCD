@@ -27,11 +27,13 @@ public class CreationCD extends HttpServlet {
 		Album album = new Album();
 		album.setTitre(titre);
 		album.setStyle(style);
-
-		if (titre != "")
-			AlbumService.getInstance().insertOrUpdate(album);
 		List<Categorie> liste = CategorieService.getInstance()
 				.getAllCategories();
+		List<Album> listebis = AlbumService.getInstance().getAllAlbums();
+		
+		if (!listebis.contains(titre) && titre != "")
+			AlbumService.getInstance().insertOrUpdate(album);
+		
 		request.setAttribute("album", album);
 		request.setAttribute("liste", liste);
 		this.getServletContext()
